@@ -1,12 +1,13 @@
 import random as r
 
-lst = list(range(10))
+count = 10000
+lst = [r.randint(0, count) for _ in range(count)]
 
-print(lst)
+lst = list(range(count))
+print(lst[:10])
 
 r.shuffle(lst)
-
-print(lst)
+print(lst[:10])
 
 s = "Python"
 lst = list(s)
