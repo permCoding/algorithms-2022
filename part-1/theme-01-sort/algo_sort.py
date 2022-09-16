@@ -46,6 +46,21 @@ def sort_bubble_plus(lst):
     return lst
 
 
+def sort_bubble_while(lst):
+    ''' усовершенствованная сортировка пузырьком while'''
+    n = len(lst)
+    swap = False
+    j = n-1  # правая граница
+    while not(swap):
+        swap = False
+        for i in range(0, j):
+            if lst[i] > lst[i+1]:
+                lst[i], lst[i+1] = lst[i+1], lst[i]
+                swap = True
+        j -= 1
+    return lst
+
+
 def sort_sh():
     """
     написать самостоятельно
