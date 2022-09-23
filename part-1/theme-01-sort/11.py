@@ -1,9 +1,17 @@
+from functools import reduce
 import sys
 
 
 def fact(n):
-    if n == 1: return 1
-    return fact(n-1) * n
+    return reduce(lambda acc, tmp: acc * tmp, range(1, n), 1)
+
+    # result = 1
+    # for i in range(1, n):
+    #     result *= i
+    # return result
+    
+    # if n == 1: return 1
+    # return fact(n-1) * n
 
 
 def f1():
@@ -21,4 +29,4 @@ def f2():
 
 sys.setrecursionlimit(20000)
 
-print(len(str(fact(2000))))
+print(len(str(fact(20000))))
