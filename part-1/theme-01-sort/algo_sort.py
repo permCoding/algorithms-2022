@@ -67,7 +67,3 @@ def sort_sh():
     провести эксперимент
     """
     return
-
-
-def quick_sort():
-    return
