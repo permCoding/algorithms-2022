@@ -27,6 +27,11 @@ def sort_merge(lst):
 
 
 def sort_quick(lst):
+    '''
+    переписать эту функцию так
+    чтобы не было три цикла
+    за один цикл выбрать меньшие, большие и равные pivot
+    '''
     if len(lst) < 2: return lst
     pivot = lst[0]
     left = list(filter(lambda x: x < pivot, lst))
