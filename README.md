@@ -23,5 +23,11 @@ else:
 
 [Разметка markdown](https://docs.microsoft.com/ru-ru/contribute/markdown-reference)  
 
----  
-
+---
+  
+```txt
+UpperCamelCase (PascalCase)
+lowerCamelCase
+snake_case
+kebab-case
+```
