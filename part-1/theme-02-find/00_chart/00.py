@@ -11,7 +11,7 @@ squares = [
 plt.xlabel('Количество сторон')
 plt.ylabel('Площадь')
 
-plt.plot(numsides, squares, '--og', lw=2)
+plt.plot(numsides, squares, '--og', lw=2, markersize=12)
 
 plt.show()
 
@@ -20,12 +20,8 @@ pip install matplotlib
 https://matplotlib.org/stable/index.html
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html
 
-если размер одной стороны равен 100, 
-то площади фигур с количеством сторон
-3 4 5 6 7 .. будут равны:
-#
-#
-#
-
-а как будет зависеть площадь фигуры от её периметра?
+- тут приводятся ответы этой задачи:
+- если размер одной стороны равен 100, 
+  то площади фигур с количеством сторон
+  3 4 5 6 7 .. будут равны: ...
 '''

@@ -7,13 +7,14 @@ def func(x):
 
 plt.style.use('seaborn')
 
-left, right, count = -5, 5, 1000
+left, right, count = -5, 5, 1000  # точность зависит от кол-ва точек
 x, step = left, (right - left) / count
-lst_x, lst_y = [x], [func(x)]
+
+lst_x, lst_y = [], []
 while x < right:
-    x += step
     lst_x.append(x)
     lst_y.append(func(x))
+    x += step
 
 fig, axes = plt.subplots()
 axes.vlines(0, min(lst_y), max(lst_y), color='orange', lw=2)
