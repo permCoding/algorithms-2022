@@ -39,4 +39,4 @@ results = [find_bin_rec(word,0,len(words)-1) for word in find_words]  # 0.007 se
 b = monotonic()
 
 print(round(b-a, 3))
-# print(results)
+print(results)

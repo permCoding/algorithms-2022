@@ -2,10 +2,10 @@ from time import monotonic
 from os import system
 
 
-system("clear")
+system("cls")
 
 words = open("./words.csv", mode="r", encoding="windows-1251").read().split('\n')
-# print(words[-9:-1])  # для контроля
+print(words[-9:-1])  # для контроля
 
 find_words = [
     "як", "абак", "кукуруза", "ящик", 
@@ -21,7 +21,7 @@ for pos in range(n):
     for word in words:
         if word == fw:
             b = monotonic()
-            results[pos] = round(b-a, 3)
+            results[pos] = round(b-a, 4)
             break
 
 lst = sorted(zip(results, find_words), key=lambda x: x[0])
