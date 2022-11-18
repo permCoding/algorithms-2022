@@ -62,14 +62,33 @@ let find_pos_bm_set = (txt, word, dct) => {
 }
 
 const get_pos_bm_set = (txt, word) => {
-    // let dct = get_dict_set(txt, word); // { 'к': 3, 'р': 1, 'а': 2, '#': 4, '&': 4 }
-    let dct = get_dict_for(txt, word);
+    let dct = get_dict_set(txt, word); // { 'к': 3, 'р': 1, 'а': 2, '#': 4, '&': 4 }
+    // let dct = get_dict_for(txt, word);
     return find_pos_bm_set(txt, word, dct);
 }
 
+let get_dict = (word) => {
+    let dct = {};
+    let lw = word.length;
+    for (let i=0; i<lw-1; i++) {
+        dct[word[i]] = lw-1 - i; // qwerty  для e => i=2 lw=6 sm=3
+    }
+    return dct;
+}
+
+let find_pos_bm = (txt, word, dct) => {
+    let lw = word.length, pos=0;
+    while (pos < txt.length-lw) {
+        if (word === txt.slice(pos,pos+lw)) { return pos; }
+        let last = txt[pos+lw-1];
+        pos += (last in dct)? dct[last]: lw;        
+    }
+    return -1;
+}
+
 const get_pos_bm = (txt, word) => {
-    // let dct = get_dict(word); // { 'к': 3, 'р': 1, 'а': 2 }
-    // return find_pos_bm(txt, word, dct);
+    let dct = get_dict(word); // { 'к': 3, 'р': 1, 'а': 2 }
+    return find_pos_bm(txt, word, dct);
 }
 
 module.exports = {
