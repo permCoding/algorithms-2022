@@ -1,6 +1,7 @@
 1) рюкзак - bin || rec || perm || combo  
 
 2) рюкзак - din 2d  
+  - как восстановить путь  
 
 3) queue - test  
   - labirint find way
