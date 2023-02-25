@@ -19,14 +19,18 @@ for i in range(3): dq.append(i)
 print('stack', dq)
 for _ in range(len(dq)): print(dq.pop())
 
-for i in range(3): dq.appendleft(i)
-print('stack reverse', dq)
-for _ in range(len(dq)): print(dq.popleft())
-
 for i in range(3): dq.append(i)
 print('queue', dq)
+for _ in range(len(dq)): print(dq.popleft())
+
+print('- - -')
+
+for i in range(3): dq.appendleft(i)
+print('stack reverse', dq)
 for _ in range(len(dq)): print(dq.popleft())
 
 for i in range(3): dq.appendleft(i)
 print('queue reverse', dq)
 for _ in range(len(dq)): print(dq.pop())
+
+
