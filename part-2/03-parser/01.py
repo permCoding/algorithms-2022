@@ -1,0 +1,17 @@
+
+import requests
+
+
+# ua = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" }
+
+url = "https://pcoding.ru/darkNet.php"
+ob = requests.get(url)
+html = ob.text
+print(html)
+
+
+
+# <a class="links" href="https://pcoding.ru/pdf/AgroRobot.pdf" 
+#     target=_blank>
+#         AgroRobot.pdf
+# </a>

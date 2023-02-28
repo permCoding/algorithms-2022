@@ -32,5 +32,3 @@ for _ in range(len(dq)): print(dq.popleft())
 for i in range(3): dq.appendleft(i)
 print('queue reverse', dq)
 for _ in range(len(dq)): print(dq.pop())
-
-
