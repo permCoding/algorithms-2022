@@ -10,8 +10,9 @@ html = ob.text
 print(html)
 
 
-
-# <a class="links" href="https://pcoding.ru/pdf/AgroRobot.pdf" 
-#     target=_blank>
-#         AgroRobot.pdf
-# </a>
+"""
+<a class="links" href="https://pcoding.ru/pdf/AgroRobot.pdf" 
+    target=_blank>
+        AgroRobot.pdf
+</a>
+"""
