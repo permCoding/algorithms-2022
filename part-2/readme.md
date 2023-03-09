@@ -48,3 +48,16 @@
 dequeue  
 
 ---  
+
+парсим:  
+- циклом while  
+- bs4  
+- re  
+- selenium  
+- scrapy  
+сохраняем:  
+- txt  
+- csv (for, csv, pandas)  
+- json  
+- excel  
+- sqlite  

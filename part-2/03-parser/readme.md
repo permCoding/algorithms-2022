@@ -26,3 +26,18 @@ https://pgsha.ru/today/
 https://n-katalog.ru/category/monitory/list?sort=PriceAsc  
 
 ---  
+
+парсим:  
+- циклом while  
+- bs4  
+- re  
+- selenium  
+- scrapy  
+сохраняем:  
+- txt  
+- csv (for, csv, pandas)  
+- json  
+- excel  
+- sqlite  
+
+---  
