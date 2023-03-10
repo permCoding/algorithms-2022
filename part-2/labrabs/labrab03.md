@@ -35,17 +35,24 @@ id;href;name
 	...
 ]
 ```
-Использовать import json  
+В начале фалйа программы подключить:
+```py
+import json  
+```
 
 Пример сохранения в файл:  
 ```py
 with open('news.json', 'w', encoding='utf8') as f:
     json.dump(lst, f, ensure_ascii=False, indent=4)
 ```
-lst - это список словарей  
-ensure_ascii=False - это чтобы символы юникода выводились как есть  
-indent - это величина отступа в пробелах  
 
+- lst - это список словарей  
+- ensure_ascii=False - это чтобы символы юникода выводились как есть  
+- indent - это величина отступа в пробелах  
+
+---  
+
+Пример организации списка - он должен быть заполнен парсером:  
 ```py
 lst = [
 	{
@@ -63,7 +70,7 @@ lst = [
 
 - а так можно не в файл, а в строку и вывести на экран:  
 ```py
-line = json.dumps(array, ensure_ascii=False, indent=4)
+line = json.dumps(lst, ensure_ascii=False, indent=4)
 ```
 
 ---  
