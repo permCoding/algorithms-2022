@@ -20,9 +20,8 @@ id;href;name
 
 **task03**  
 
-Со странички https://pgsha.ru/today/  
-Спарсить список новостей (первые 10)  
-Сохранить их в json-файл - news.json  
+Со странички https://pgsha.ru/today/ или https://pgatu.ru/today/  
+спарсить список новостей (первые 10) и сохранить их в json-файл - news.json  
 Формат для сохранения:  
 ```json
 [
