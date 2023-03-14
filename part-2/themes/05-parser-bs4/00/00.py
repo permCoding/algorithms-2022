@@ -36,8 +36,9 @@ soup = BeautifulSoup(html, 'html.parser')
 # = = = = = = = = = = = = = = = 
 
 # prod = soup.find('div', class_='prod__info')
-# prod = soup.find('div', { 'class': 'prod__info' })
-# prodname = prod.find('div', id='prodname').text.strip()
+prod = soup.find('div', { 'class': 'prod__info' })
+prodname = prod.find('div', id='prodname').text.strip()
+print(prodname)
 
 # prodname = prod.find('div', {'id':'prodname', 'class':'prod__name'}).text.strip()
 # prodprice = prod.find_all('div')[1].find_all('span')[1].text
@@ -48,25 +49,25 @@ soup = BeautifulSoup(html, 'html.parser')
 # for i in range(len(pp)-1,-1,-1): print(pp[i].text)
 # = = = = = = = = = = = = = = = 
 
-find_price = soup.find('span', string="Стоимость:")
-print(find_price)
-print(find_price.find_next_sibling())
-for e in find_price.find_next_siblings('span'):
-    print('-', e)
+# find_price = soup.find('span', string="Стоимость:")
+# print(find_price)
+# print(find_price.find_next_sibling())
+# for e in find_price.find_next_siblings('span'):
+#     print('-', e)
 
 # find_price = soup.find('span', string=re.compile('Руб\.?', re.I))
-find_price = soup.find('span', string=re.compile('[Рр]уб\.{0,1}'))
-print(find_price)
-print(find_price.find_previous_sibling())
-print(find_price.find_previous_sibling().text)
-for e in find_price.find_previous_siblings('span')[::-1]:
-    print('+', e.text)
+# find_price = soup.find('span', string=re.compile('[Рр]уб\.{0,1}'))
+# print(find_price)
+# print(find_price.find_previous_sibling())
+# print(find_price.find_previous_sibling().text)
+# for e in find_price.find_previous_siblings('span')[::-1]:
+#     print('+', e.text)
 # = = = = = = = = = = = = = = = 
-links = soup.find(class_="shops__info").find_all("a")
-for link in links:
-    print(link.get("href"))
-    print(link["href"])
-    print(link.text)
+# links = soup.find(class_="shops__info").find_all("a")
+# for link in links:
+#     print(link.get("href"))
+#     print(link["href"])
+#     print(link.text)
 # = = = = = = = = = = = = = = = 
 # def class_without_id(tag):
 #     return tag.has_attr('class') and not tag.has_attr('id')
