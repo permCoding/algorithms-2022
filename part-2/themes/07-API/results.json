@@ -1,0 +1,37 @@
+[
+    {
+        "data": "2022-08-01",
+        "name": "Magistr-2022",
+        "lang": "JavaScript",
+        "url": "https://api.github.com/repos/permCoding/Magistr-2022",
+        "desc": null
+    },
+    {
+        "data": "2022-03-09",
+        "name": "pcis-22",
+        "lang": "JavaScript",
+        "url": "https://api.github.com/repos/permCoding/pcis-22",
+        "desc": "programming of complex information systems - 2022"
+    },
+    {
+        "data": "2019-11-06",
+        "name": "js-lodash-lection",
+        "lang": "JavaScript",
+        "url": "https://api.github.com/repos/permCoding/js-lodash-lection",
+        "desc": "Функциональная библиотека lodash"
+    },
+    {
+        "data": "2019-11-05",
+        "name": "js-csv-lection",
+        "lang": "JavaScript",
+        "url": "https://api.github.com/repos/permCoding/js-csv-lection",
+        "desc": "Методы работы с csv-файлами"
+    },
+    {
+        "data": "2019-11-03",
+        "name": "js-mysql-lection",
+        "lang": "JavaScript",
+        "url": "https://api.github.com/repos/permCoding/js-mysql-lection",
+        "desc": "Способы работы с MySQL из node.js"
+    }
+]
