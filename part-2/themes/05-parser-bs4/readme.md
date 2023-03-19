@@ -11,6 +11,18 @@ https://scrapingclub.com/exercise/list_infinite_scroll/
 
 ### Библиотека для парсера данных из html разметки  
 
+Методы:  
+- .find() .find_all()  
+- .find_parent() .find_parents()  
+- .find_next_sibling() .find_previous_sibling()  
+- .find_next_siblings() .find_previous_siblings()  
+- .next_element .previous_element  
+- .next_elements .previous_elements  
+- .get() dict  
+- import re: soup.find_all(text=re.compile(ptn))  
+
+---  
+
 Документация:  
 https://beautiful-soup-4.readthedocs.io/en/latest/  
 https://www.crummy.com/software/BeautifulSoup/bs4/doc.ru/bs4ru.html  

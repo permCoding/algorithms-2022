@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from time import sleep  # можно добавить задержку
 
 
-def get_prod(i, prod):
+def get_prod(i, prod):  # парсим библиотекой bs4
     tag_a = prod.find('a', class_='catalog-product__name')
     title, href = tag_a.text.strip(), base_url + tag_a.get('href')
     price = prod.find('div', class_='product-buy__price').text.replace('₽', '').strip()

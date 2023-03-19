@@ -26,7 +26,6 @@ browser.get(base_url + url + post)
 sleep(5)  # чтобы прогрузились все теги
     
 prods = browser.find_elements(By.CLASS_NAME, 'catalog-product')
-
 lst = [get_prod(i, prod) for i, prod in enumerate(prods)]
 
 with open('prods.json', 'w', encoding='utf8') as f:

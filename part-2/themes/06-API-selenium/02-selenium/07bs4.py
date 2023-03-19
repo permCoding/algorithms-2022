@@ -7,30 +7,34 @@ from bs4 import BeautifulSoup
 # bs4 не всегда поможет - иногда части страницы не успевают прогрузиться
 from time import sleep  # можно добавить задержку
 
+# сначала популярные: post = ?order=6&stock=now-today
+
+def get_prod(prod):  # парсим библиотекой bs4
+    tag_a = prod.find('a', class_='catalog-product__name')
+    title, href = tag_a.text.strip(), base_url + tag_a.get('href')
+    price = prod.find('div', class_='product-buy__price').text.replace('₽', '').strip()
+    stores = prod.find('div', class_="order-avail-wrap").text.strip()
+    cols = ['title', 'href', 'price', 'stores']
+    vals = [title, href, price, stores]
+    return dict(zip(cols, vals))
+
 
 browser = webdriver.Firefox()
 base_url, url = 'https://www.dns-shop.ru', '/catalog/8a9ddfba20724e77/ssd-nakopiteli/'
 
-cols = ['id', 'title', 'href', 'price', 'stores']
-i, lst, count = 0, [], 3
+lst, count = [], 5
 for page in range(1, count+1):
     print(f'page-{page}')
-    post = f'?stock=now-today&p={page}'
-    browser.get(base_url + url + post)
+    post = f'?order=6&stock=now-today&p={page}'
     
-    sleep(5)  # чтобы прогрузились все теги
+    browser.get(base_url + url + post)
+    sleep(6)  # чтобы прогрузились все теги
+    
     html = browser.find_element(By.CLASS_NAME, 'products-list').get_attribute('innerHTML')
     soup = BeautifulSoup(html, 'html.parser')
     prods = soup.find_all('div', class_='catalog-product')
     
-    for prod in prods:
-        tag_a = prod.find('a', class_='catalog-product__name')
-        title, href = tag_a.text.strip(), base_url + tag_a.get('href')
-        price = prod.find('div', class_='product-buy__price').text.replace('₽', '').strip()
-        stores = prod.find('div', class_="order-avail-wrap").text.strip()
-        i += 1
-        vals = [i, title, href, price, stores]
-        lst.append(dict(zip(cols, vals)))
+    lst.extend([get_prod(prod) for prod in prods])
 
 with open('prods.json', 'w', encoding='utf8') as f:
     json.dump(lst, f, ensure_ascii=False, indent=4)
