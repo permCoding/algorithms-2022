@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 
 html = """
 <div class="prod__info">
-    <div class="prod__name" id="prodname">
+    <div id="prodname">
         <span>ZenFone 3 Deluxe Oreo</span>
     </div>
     <div class="prod__price">
@@ -32,5 +32,6 @@ tags = soup \
     .find('div', class_='prod__info') \
     .find_all(div_and_class)
 for tag in tags:
-    print(tag.find('span').text.strip())
+    # print(tag.find('span').text.strip())
+    print(tag.find_all('span')[0].text.strip())
 

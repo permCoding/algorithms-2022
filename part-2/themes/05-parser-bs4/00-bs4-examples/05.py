@@ -24,6 +24,11 @@ soup = BeautifulSoup(html, "html.parser")
 tag_price = soup.find('span', string=re.compile('руб'))
 print(tag_price.text)
 print('- - - - -')
+
+tags_price = soup.find_all('span', string=re.compile('руб'))
+print(tags_price)
+print('- - - - -')
+
 tags = soup.find_all('span', string=re.compile('Руб.'))
 for tag in tags: print(tag.text)
 print('- - - - -')

@@ -7,15 +7,15 @@ from time import sleep
 
 browser = webdriver.Firefox()
 browser.get('https://pgatu.ru/today/')
-sleep(6)
+sleep(3)
 
 btn_next = browser.find_element(By.CLASS_NAME, 'next')
 btn_next.click()
-sleep(6)
+sleep(3)
 
 btn_next = browser.find_element(By.CLASS_NAME, 'next')
 btn_next.click()
-sleep(6)
+sleep(3)
 
 browser.quit()
 

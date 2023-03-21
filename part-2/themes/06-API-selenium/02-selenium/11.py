@@ -9,8 +9,11 @@ browser = webdriver.Firefox()
 browser.get('https://pgatu.ru/today/')
 sleep(6)
 
-button = browser.find_element(By.CLASS_NAME, 'next')
-print(button.text.strip())
+try:
+    button = browser.find_element(By.CLASS_NAME, 'next')
+    print(button.text.strip())
+except:
+    print('ошибка на странице')
 
 browser.quit()
 

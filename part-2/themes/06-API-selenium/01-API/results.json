@@ -1,37 +1,37 @@
 [
     {
-        "data": "2022-08-01",
-        "name": "Magistr-2022",
-        "lang": "JavaScript",
-        "url": "https://api.github.com/repos/permCoding/Magistr-2022",
+        "data": "2023-03-20",
+        "name": "parser-books",
+        "lang": "Python",
+        "url": "https://api.github.com/repos/permCoding/parser-books",
+        "desc": "Парсер книг магазина ЧГ"
+    },
+    {
+        "data": "2022-11-09",
+        "name": "algopro-corresp",
+        "lang": "Python",
+        "url": "https://api.github.com/repos/permCoding/algopro-corresp",
+        "desc": "Заочное обучение - Алгоритмизация и программирование"
+    },
+    {
+        "data": "2022-08-25",
+        "name": "ege-22-23",
+        "lang": "Python",
+        "url": "https://api.github.com/repos/permCoding/ege-22-23",
         "desc": null
     },
     {
-        "data": "2022-03-09",
-        "name": "pcis-22",
-        "lang": "JavaScript",
-        "url": "https://api.github.com/repos/permCoding/pcis-22",
-        "desc": "programming of complex information systems - 2022"
+        "data": "2021-09-08",
+        "name": "ege-21-22",
+        "lang": "Python",
+        "url": "https://api.github.com/repos/permCoding/ege-21-22",
+        "desc": null
     },
     {
-        "data": "2019-11-06",
-        "name": "js-lodash-lection",
-        "lang": "JavaScript",
-        "url": "https://api.github.com/repos/permCoding/js-lodash-lection",
-        "desc": "Функциональная библиотека lodash"
-    },
-    {
-        "data": "2019-11-05",
-        "name": "js-csv-lection",
-        "lang": "JavaScript",
-        "url": "https://api.github.com/repos/permCoding/js-csv-lection",
-        "desc": "Методы работы с csv-файлами"
-    },
-    {
-        "data": "2019-11-03",
-        "name": "js-mysql-lection",
-        "lang": "JavaScript",
-        "url": "https://api.github.com/repos/permCoding/js-mysql-lection",
-        "desc": "Способы работы с MySQL из node.js"
+        "data": "2021-09-05",
+        "name": "algopro21",
+        "lang": "Python",
+        "url": "https://api.github.com/repos/permCoding/algopro21",
+        "desc": "Программирование для первого курса 2021-2022 "
     }
 ]
