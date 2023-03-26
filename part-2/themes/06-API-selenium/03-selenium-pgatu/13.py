@@ -7,10 +7,13 @@ from time import sleep
 
 def get_data():
     lst_page = []
-    lst = browser.find_elements(By.CLASS_NAME, 'list-entry')
+    lst = browser \
+        .find_elements(By.CLASS_NAME, 'list-entry')
     for elm in lst:
-        title = elm.find_element(By.TAG_NAME, 'h5').text.strip()
-        lst_page.append(title)
+        title = elm.find_element(By.TAG_NAME, 'a').text.strip()
+        data = elm.find_element(By.TAG_NAME, 'small').text.strip()
+        if data != '':
+            lst_page.append([data,title])
     return lst_page
 
 
@@ -18,6 +21,8 @@ count_pages = 3
 news = []
 
 browser = webdriver.Firefox()
+browser.maximize_window()
+
 browser.get('https://pgatu.ru/today/')
 browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 sleep(1)
@@ -31,8 +36,7 @@ for _ in range(count_pages-1):
     news.extend(get_data())
 
 for elm in news: print(elm)
-
-browser.quit()
+browser.close()
 
 """
 <nav id="pagination">
