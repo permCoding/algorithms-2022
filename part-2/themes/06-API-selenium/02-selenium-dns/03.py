@@ -19,6 +19,6 @@ links = td_first.find_elements(By.TAG_NAME, 'a')
 for link in links:
     href = link.get_attribute('href')
     print(link.text, unquote(href))
-    
+
 
 browser.quit()

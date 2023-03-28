@@ -7,22 +7,34 @@ import json
 
 browser = webdriver.Firefox()
 browser.get('https://www.dns-shop.ru/catalog/8a9ddfba20724e77/ssd-nakopiteli/')
+"""
+https://www.dns-shop.ru/
+catalog/8a9ddfba20724e77/ssd-nakopiteli/
+?order=6&shop-catalog=4160-517-4438-2764&stock=now-today
+"""
 
-cols = ['title', 'href', 'price']
 lst = []
-
 prods = browser.find_elements(By.CLASS_NAME, 'catalog-product')
 for prod in prods:
     title = prod.find_element(By.CLASS_NAME, 'catalog-product__name').text.strip()
     href = prod.find_element(By.TAG_NAME, 'a').get_attribute('href')
     price = prod.find_element(By.CLASS_NAME, 'product-buy').text.strip().split('\n')[0]
-    vals = [title, href, price]
-    lst.append(dict(zip(cols, vals)))
+    
+    # cols = ['title', 'href', 'price']
+    # vals = [title, href, price]
+    # lst.append(dict(zip(cols, vals)))
+
+    obj = {
+        'title': title,
+        'href': href,
+        'price': price
+    }
+    lst.append( obj )
 
 s = json.dumps(lst, ensure_ascii=False, indent=4)    
 print(s)
 
-browser.quit()
+browser.close()
 
 """
 <div data-id="product" class="catalog-product ui-button-widget "

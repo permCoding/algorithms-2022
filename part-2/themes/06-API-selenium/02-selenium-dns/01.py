@@ -7,4 +7,6 @@ browser.get('https://pcoding.ru/darkNet.php')
 
 print(browser.title)
 
-browser.quit()
+browser.close()
+
+# browser.quit()  # закрывает все окна 

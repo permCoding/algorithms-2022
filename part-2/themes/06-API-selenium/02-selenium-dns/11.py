@@ -17,6 +17,7 @@ def get_prod(prod):
     vals = [title, href, price, stores]
     return dict(zip(cols, vals))
 
+
 def get_prods():
     tags = browser.find_elements(By.CLASS_NAME, 'catalog-product')
     return [get_prod(prod) for prod in tags]
@@ -38,7 +39,7 @@ def window_scroll():
     browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 
-def get_pages(count=0):
+def get_pages(count=1):
     lst = []
     for page in range(count):
         url = get_url(page+1)

@@ -21,7 +21,7 @@ browser = webdriver.Firefox()
 
 base_url = 'https://www.dns-shop.ru/'
 cat = 'catalog/8a9ddfba20724e77/ssd-nakopiteli/'
-page = 1
+page = 2
 params = f'?stock=now-today&p={page}'
 url = base_url + cat + params
 
