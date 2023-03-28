@@ -18,11 +18,14 @@ def get_prod(i, prod):
 
 
 browser = webdriver.Firefox()
-base_url, url = 'https://www.dns-shop.ru', '/catalog/8a9ddfba20724e77/ssd-nakopiteli/'
-page = 1
-post = f'?stock=now-today&p={page}'
 
-browser.get(base_url + url + post)
+base_url = 'https://www.dns-shop.ru/'
+cat = 'catalog/8a9ddfba20724e77/ssd-nakopiteli/'
+page = 1
+params = f'?stock=now-today&p={page}'
+url = base_url + cat + params
+
+browser.get(url)
 sleep(5)  # чтобы прогрузились все теги
     
 prods = browser.find_elements(By.CLASS_NAME, 'catalog-product')
