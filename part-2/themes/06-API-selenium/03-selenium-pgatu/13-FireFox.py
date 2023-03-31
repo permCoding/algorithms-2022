@@ -5,13 +5,14 @@ from selenium.webdriver.common.by import By
 from time import sleep
 
 
-def get_data():
+def get_data_on_page():
     lst_page = []
-    lst = browser \
-        .find_elements(By.CLASS_NAME, 'list-entry')
+    lst = browser.find_elements(By.CLASS_NAME, 'list-entry')
     for elm in lst:
-        title = elm.find_element(By.TAG_NAME, 'a').text.strip()
-        data = elm.find_element(By.TAG_NAME, 'small').text.strip()
+        title = elm \
+            .find_element(By.TAG_NAME, 'a').text.strip()
+        data = elm \
+            .find_element(By.TAG_NAME, 'small').text.strip()
         if data != '':
             lst_page.append([data,title])
     return lst_page
@@ -23,19 +24,23 @@ news = []
 browser = webdriver.Firefox()
 browser.maximize_window()
 
+page = 1
+print(f'page={page}')
 browser.get('https://pgatu.ru/today/')
 browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-sleep(1)
-news.extend(get_data())
+sleep(2)
+news.extend(get_data_on_page())
 
-for _ in range(count_pages-1):
+while page < count_pages:
+    page += 1
+    print(f'page={page}')
     btn_next = browser.find_element(By.CLASS_NAME, 'next')
     btn_next.click()
     browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(1)
-    news.extend(get_data())
+    sleep(2)
+    news.extend(get_data_on_page())
 
-for elm in news: print(elm)
+for i, elm in enumerate(news): print(i, elm)
 browser.close()
 
 """
