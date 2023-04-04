@@ -30,13 +30,20 @@ const get_recursive = (max_w, arr) => {
 }
 
 
-let prods = require('./json/input6.json')
+let prods = require('./json/input25.json')
+let max_w = 150
 
-prods.map(obj => { obj.id=+obj.id, obj.w=+obj.w, obj.p=+obj.p })
+prods
+    .map(obj => 
+        { 
+            obj.id=+obj.id, 
+            obj.w=+obj.w, 
+            obj.p=+obj.p 
+        })
 
 console.clear()
 console.log('recursive algorithm')
-let max_w = 1500
+
 let solver = get_recursive(max_w, prods)
 
 console.log(solver)

@@ -59,13 +59,13 @@ def ex_c():
         сайта,                           с большим количеством пробелов   
         и         переносов           строк      ...                """
     
-    s = s.replace('\n', ' ').replace('  ', ' ')
+    # s = s.replace('\n', ' ').replace('  ', ' ')
     # while s.find('  ') > -1: s = s.replace('  ', ' ')    
     
     # s = re.sub(r"\n", " ", s)
     # s = re.sub(r"\s+", " ", s)
     
-    # s = re.sub(r"(\n|\s)+", " ", s)
+    s = re.sub(r"(\n|\s)+", " ", s)  # ? - можно отменить жадный поиск
 
     print(s.strip())
 
@@ -94,4 +94,4 @@ def ex_d():
     print(reg.sub(lambda m: f"{m[1]}: {m[2]}", ini))
 
 
-ex_a()
+ex_c()

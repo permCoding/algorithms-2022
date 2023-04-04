@@ -28,8 +28,8 @@ const get_bin_mask = (max_w, prods) => {
 }
 
 
-let prods = require('./json/input6.json')
-let max_w = 1500
+let prods = require('./json/input25.json')
+let max_w = 150
 
 prods
     .map(item => {

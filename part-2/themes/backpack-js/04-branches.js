@@ -29,8 +29,8 @@ const get_branches = (max_w, arr) => {
 }
 
 
-let prods = require('./json/input4.json')
-let max_w = 100
+let prods = require('./json/input25.json')
+let max_w = 150
 
 prods.map(obj => { obj.id=+obj.id, obj.w=+obj.w, obj.p=+obj.p })
 

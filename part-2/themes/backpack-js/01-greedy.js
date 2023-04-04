@@ -22,8 +22,8 @@ const get_greedy = (max_w, prods) => {
 }
 
 
-let prods = require('./json/input6.json')
-let max_w = 1500
+let prods = require('./json/input30.json')
+let max_w = 150
 
 // преобразовать типы данных в обектах
 prods
